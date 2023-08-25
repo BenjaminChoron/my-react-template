@@ -1,5 +1,14 @@
 # React Starting Template
 
+## Content
+
+<img src="https://www.svgrepo.com/show/374167/vite.svg" alt="vite logo" style="width: 20px"> [Vite](https://vitejs.dev/)\
+<img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="vite logo" style="width: 20px"> [TypeScript](https://www.typescriptlang.org/)\
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/ESLint_logo.svg/1200px-ESLint_logo.svg.png" alt="vite logo" style="width: 20px"> [ESLint](https://eslint.org/)\
+<img src="https://www.svgrepo.com/show/354208/prettier.svg" alt="vite logo" style="width: 20px"> [Prettier](https://prettier.io/)\
+🐶 [Husky](https://github.com/typicode/husky)\
+<img src="https://www.svgrepo.com/show/373518/commitlint.svg" alt="vite logo" style="width: 20px"> [Commitlint](https://commitlint.js.org/#/)
+
 ## Installation
 
 Clone the repo and run `npm install` in the project directory\
