@@ -1,0 +1,9 @@
+{
+  "title": "Bienvenue {{name}}",
+  "description": {
+    "part1": "Exemple.",
+    "part2": "😉"
+  },
+  "userMessagesUnread_one": "Vous avez {{count}} message.",
+  "userMessagesUnread_other": "Vous avez {{count}} messages."
+}
