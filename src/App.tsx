@@ -1,22 +1,22 @@
-import { useTranslation, Trans } from 'react-i18next';
-import './i18n/config.ts';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import './App.css';
 
+import Home from './pages/Home';
+import Page from './pages/Page';
+import PageNotFound from './pages/PageNotFound';
+import Nav from './components/Nav/Nav';
+
 function App() {
-  const { t } = useTranslation();
-
-  const count = 3;
-
   return (
-    <>
-      <h1>My React Template</h1>
-      <p>{t('title', { name: 'John' })}</p>
-      <p>{t('description.part1')}</p>
-      <p>{t('description.part2')}</p>
-      <Trans i18nKey="userMessagesUnread" count={count}>
-        You have {{ count }} unread message.
-      </Trans>
-    </>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/page" element={<Page />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
