@@ -1,3 +1,7 @@
 export default function Page() {
-  return <div>Page</div>;
+  return (
+    <section>
+      <h2 className="text-xl">Page</h2>
+    </section>
+  );
 }
