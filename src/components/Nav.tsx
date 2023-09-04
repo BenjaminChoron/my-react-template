@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, MoonIcon, SunIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Page', href: '/page' },
 ];
 
-export default function Nav() {
+export default function Nav({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMode: () => void }) {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 dark:bg-gray-700">
       {({ open, close }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -26,7 +26,7 @@ export default function Nav() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                 <div className="flex flex-shrink-0 items-center">
                   <img className="h-8 w-auto" src="/react.svg" alt="Your Company" />
                 </div>
@@ -36,29 +36,45 @@ export default function Nav() {
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                        className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                       >
                         {item.name}
                       </NavLink>
                     ))}
                   </div>
                 </div>
+                <div className="hidden sm:ml-6 sm:block">
+                  <button
+                    className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    onClick={toggleDarkMode}
+                  >
+                    {darkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="sm:hidden flex justify-between items-center">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   onClick={() => close()}
                 >
                   {item.name}
                 </NavLink>
               ))}
+            </div>
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <button
+                className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                onClick={toggleDarkMode}
+              >
+                {darkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+              </button>
             </div>
           </Disclosure.Panel>
         </>
