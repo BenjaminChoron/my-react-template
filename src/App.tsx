@@ -3,7 +3,7 @@ import Nav from './components/Nav';
 
 function App() {
   return (
-    <div className="App">
+    <div className="min-h-screen flex flex-col font-sans">
       <Nav />
       <Outlet />
     </div>

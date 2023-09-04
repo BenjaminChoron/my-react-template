@@ -1,4 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next';
+import Section from '../components/Base/Section';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -6,7 +7,7 @@ export default function Home() {
   const count = 3;
 
   return (
-    <section>
+    <Section>
       <h1 className="pb-3 text-3xl">My React Template</h1>
       <p className="pb-2">{t('title', { name: 'John' })}</p>
       <p className="pb-2">{t('description.part1')}</p>
@@ -14,6 +15,6 @@ export default function Home() {
       <Trans i18nKey="userMessagesUnread" count={count}>
         You have {{ count }} unread message.
       </Trans>
-    </section>
+    </Section>
   );
 }
