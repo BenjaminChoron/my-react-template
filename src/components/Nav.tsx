@@ -83,12 +83,18 @@ export default function Nav({ darkMode, toggleDarkMode }: { darkMode: boolean; t
                 </NavLink>
               ))}
             </div>
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="flex px-2 pt-2 pb-3 space-y-1">
               <button
                 className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 onClick={toggleDarkMode}
               >
                 {darkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
+              </button>
+              <button
+                className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                onClick={toggleLanguage}
+              >
+                {language === 'fr' ? 'En' : 'Fr'}
               </button>
             </div>
           </Disclosure.Panel>
