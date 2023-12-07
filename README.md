@@ -12,6 +12,7 @@
 <img src="https://www.gitbook.com/cdn-cgi/image/width=40,dpr=2,height=40,fit=contain,format=auto/https%3A%2F%2F4042378089-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-legacy-files%2Fo%2Fspaces%252F-L9iS6WpW81N7RGRTQ-K%252Favatar.png%3Fgeneration%3D1523345851027218%26alt%3Dmedia" alt="react-18next logo" style="width: 20px"> [React-18next](https://react.i18next.com/)\
 <img src="https://reactrouter.com/_brand/react-router-mark-color.png" alt="react-router-dom logo" style="width: 20px"> [React-Router-Dom](https://reactrouter.com/en/main)\
 <img src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png" alt="tailwind css logo" style="width: 20px"> [Tailwind CSS](https://tailwindcss.com/)
+<img src="https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg" alt="daisy ui logo" style="width: 20px"> [DaisyUI]([https://tailwindcss.com/](https://daisyui.com/))
 
 ## Installation
 
