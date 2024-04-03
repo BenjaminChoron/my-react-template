@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className={`min-h-screen flex flex-col font-sans ${darkMode ? 'dark' : ''}`}>
-      <Nav darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Nav toggleDarkMode={toggleDarkMode} />
       <Outlet />
     </div>
   );

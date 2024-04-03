@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Page', href: '/page' },
 ];
 
-export default function Nav({ darkMode, toggleDarkMode }: { darkMode: boolean; toggleDarkMode: () => void }) {
+export default function Nav({ toggleDarkMode }: { toggleDarkMode: () => void }) {
   const { i18n } = useTranslation();
 
   const language = i18n.language;
@@ -53,18 +53,20 @@ export default function Nav({ darkMode, toggleDarkMode }: { darkMode: boolean; t
                   </div>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex">
-                  <button
-                    className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    onClick={toggleDarkMode}
-                  >
-                    {darkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
-                  </button>
-                  <button
-                    className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                    onClick={toggleLanguage}
-                  >
-                    {language === 'fr' ? 'Fr' : 'En'}
-                  </button>
+                  <label className="swap swap-rotate">
+                    {/* this hidden checkbox controls the state */}
+                    <input type="checkbox" onClick={toggleDarkMode} />
+
+                    <SunIcon className="swap-on fill-current w-6 h-6" />
+                    <MoonIcon className="swap-off fill-current w-6 h-6" />
+                  </label>
+                  <label className="swap swap-flip ml-3">
+                    {/* this hidden checkbox controls the state */}
+                    <input type="checkbox" onClick={toggleLanguage} />
+
+                    <span className="swap-on">En</span>
+                    <span className="swap-off">Fr</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -84,18 +86,20 @@ export default function Nav({ darkMode, toggleDarkMode }: { darkMode: boolean; t
               ))}
             </div>
             <div className="flex px-2 pt-2 pb-3 space-y-1">
-              <button
-                className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                onClick={toggleDarkMode}
-              >
-                {darkMode ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
-              </button>
-              <button
-                className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                onClick={toggleLanguage}
-              >
-                {language === 'fr' ? 'Fr' : 'En'}
-              </button>
+              <label className="swap swap-rotate">
+                {/* this hidden checkbox controls the state */}
+                <input type="checkbox" onClick={toggleDarkMode} />
+
+                <SunIcon className="swap-on fill-current w-6 h-6" />
+                <MoonIcon className="swap-off fill-current w-6 h-6" />
+              </label>
+              <label className="swap swap-flip ml-3">
+                {/* this hidden checkbox controls the state */}
+                <input type="checkbox" onClick={toggleLanguage} />
+
+                <span className="swap-on">En</span>
+                <span className="swap-off">Fr</span>
+              </label>
             </div>
           </Disclosure.Panel>
         </>

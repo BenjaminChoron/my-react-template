@@ -5,7 +5,7 @@ import enDictionary from './en/translation.json';
 import frDictionary from './fr/translation.json';
 
 i18next.use(initReactI18next).init({
-  lng: 'en',
+  lng: 'fr',
   debug: true,
   resources: {
     en: {
