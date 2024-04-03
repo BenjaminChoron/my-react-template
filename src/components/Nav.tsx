@@ -63,7 +63,7 @@ export default function Nav({ darkMode, toggleDarkMode }: { darkMode: boolean; t
                     className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     onClick={toggleLanguage}
                   >
-                    {language === 'fr' ? 'En' : 'Fr'}
+                    {language === 'fr' ? 'Fr' : 'En'}
                   </button>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function Nav({ darkMode, toggleDarkMode }: { darkMode: boolean; t
                 className="text-gray-300 hover:bg-gray-600 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 onClick={toggleLanguage}
               >
-                {language === 'fr' ? 'En' : 'Fr'}
+                {language === 'fr' ? 'Fr' : 'En'}
               </button>
             </div>
           </Disclosure.Panel>
