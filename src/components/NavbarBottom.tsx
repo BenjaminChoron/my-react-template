@@ -11,12 +11,12 @@ export default function NavbarBottom({
   toggleLanguage: () => void;
 }) {
   return (
-    <div className="sm:hidden btm-nav">
+    <div className="sm:hidden btm-nav bg-light-green text-dark-green">
       {navigation.map((item) => (
         <NavLink
           key={item.name}
           to={item.href}
-          className="text-gray-300 hover:bg-gray-600 hover:text-white px-3 py-2 text-sm font-medium mr-3"
+          className="text-dark-green hover:text-white px-3 py-2 text-sm font-medium mr-3"
         >
           {item.name}
         </NavLink>

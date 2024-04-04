@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import NavbarTop from './components/NavbarTop';
-import NavbarBottom from './components/NavbarBotton';
+import NavbarBottom from './components/NavbarBottom';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -11,7 +11,9 @@ const navigation = [
 
 function App() {
   const { i18n } = useTranslation();
-  const [darkMode, setDarkMode] = useState(false);
+
+  const isUserDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [darkMode, setDarkMode] = useState(isUserDarkMode);
 
   const language = i18n.language;
 
@@ -24,7 +26,7 @@ function App() {
   }
 
   return (
-    <div className={`min-h-screen flex flex-col font-sans ${darkMode ? 'dark' : ''}`}>
+    <div className={`min-h-screen flex flex-col font-sans bg-gray-200 text-slate-800 ${darkMode ? 'dark' : ''}`}>
       <NavbarTop navigation={navigation} toggleDarkMode={toggleDarkMode} toggleLanguage={toggleLanguage} />
       <Outlet />
       <NavbarBottom navigation={navigation} toggleDarkMode={toggleDarkMode} toggleLanguage={toggleLanguage} />

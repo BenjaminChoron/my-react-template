@@ -9,5 +9,9 @@
 }
 
 .dark {
-  @apply bg-gray-800 text-gray-300;
+  @apply bg-base-200 text-gray-300;
+}
+
+.active {
+  @apply bg-dark-green text-white;
 }
